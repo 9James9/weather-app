@@ -1,0 +1,31 @@
+html {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #41b3a3;
+}
+h1 {
+    font-family: 'Rock 3D', cursive, sans-serif;
+}
+p {
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.container {
+    border: 5px solid #696969;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8a87c;
+    max-width: 800px;
+    padding: 10px;
+}
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
