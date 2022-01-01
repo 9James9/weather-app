@@ -1,0 +1,1 @@
+This is my submission for The Odin Project's weather app assignment!
