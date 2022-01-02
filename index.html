@@ -20,9 +20,22 @@
             <input class="cityinput" data-city-input>
             <button class="searchbutton" data-search-button>Search</button>
         </form>
-        <div class="results">
-            <p class="selectedcity" data-selected-city>Enter a city above to see the weather in fahrenheit</p>
-            <p data-city-display></p>
+        <p class="selectedcity" data-selected-city>Enter a city above to see the weather in fahrenheit</p>
+        <div class="results hidden">
+
+            <div class="resultbox">
+                <div class="currenttemp">
+                    <div>Current temp</div>
+                    <div data-current-temp class="currentTempNum"></div>
+                </div>
+                <div class="highTempLowTemp">
+                    <div data-high-temp></div>
+                    <div data-low-temp></div>
+                </div>
+            </div>
+
+
+            <div data-wind></div>
             <button class="convertbtn searchbutton hidden" data-convert-celsius>Convert to Celsius</button>
         </div>
     </div>
