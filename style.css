@@ -5,6 +5,7 @@ html {
     display: grid;
     place-items: center;
     background-color: #41b3a3;
+    box-sizing: border-box;
 }
 
 h1 {

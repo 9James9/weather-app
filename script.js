@@ -3,6 +3,7 @@ const searchButton = document.querySelector('[data-search-button]')
 const cityDisplay = document.querySelector('[data-city-display]')
 const selectedCity = document.querySelector('[data-selected-city]')
 const convertBtn = document.querySelector('[data-convert-celsius]')
+const highDisplay = document.querySelector('[data-high-temp]')
 searchButton.addEventListener('click', e => {
     e.preventDefault()
     let city = cityInput.value
@@ -47,7 +48,10 @@ async function getWeather(city, unit) {
 }
 
 function displayCityWeather(unit, currentTemp, highTemp, lowTemp, windSpeeds) {
-    cityDisplay.textContent = `The current weather is ${currentTemp} degrees ${unit} with a high of ${highTemp} and a low of ${lowTemp}. Expect wind speeds around ${windSpeeds} miles per hour`
+    cityDisplay.textContent = `${currentTemp}${unit}`
+    highDisplay.textContent = `${highTemp}${unit}`
+    document.querySelector('[data-wind]').textContent = `${windSpeeds}mph`
+    document.querySelector('[data-low-temp]').textContent = `${lowTemp}${unit}`
 }
 
 function displayCurrentCity(city) {
@@ -75,4 +79,4 @@ function kelvinToCelsius(kelvin) {
 function kelvinToFahrenheit(kelvin) {
     return (((kelvin - 273.15) * 9 / 5) + 32).toFixed(0)
 }
-//betterui
+// getWeather('fort worth','fahrenheit')
