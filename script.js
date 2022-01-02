@@ -1,9 +1,7 @@
 const cityInput = document.querySelector('[data-city-input]')
 const searchButton = document.querySelector('[data-search-button]')
-const cityDisplay = document.querySelector('[data-city-display]')
 const selectedCity = document.querySelector('[data-selected-city]')
 const convertBtn = document.querySelector('[data-convert-celsius]')
-const highDisplay = document.querySelector('[data-high-temp]')
 searchButton.addEventListener('click', e => {
     e.preventDefault()
     let city = cityInput.value
@@ -48,8 +46,8 @@ async function getWeather(city, unit) {
 }
 
 function displayCityWeather(unit, currentTemp, highTemp, lowTemp, windSpeeds) {
-    cityDisplay.textContent = `${currentTemp}${unit}`
-    highDisplay.textContent = `${highTemp}${unit}`
+    document.querySelector('[data-current-temp]').textContent = `${currentTemp}${unit}`
+    document.querySelector('[data-high-temp]').textContent = `${highTemp}${unit}`
     document.querySelector('[data-wind]').textContent = `${windSpeeds}mph`
     document.querySelector('[data-low-temp]').textContent = `${lowTemp}${unit}`
 }
