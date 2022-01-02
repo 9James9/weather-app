@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+
 html {
     height: 100vh;
     display: grid;
     place-items: center;
     background-color: #41b3a3;
 }
+
 h1 {
     font-family: 'Rock 3D', cursive, sans-serif;
 }
+
 p {
     font-size: 20px;
-    font-family: cursive;
+    font-family: 'Padauk', cursive, sans-serif;
+    text-align: center;
 }
 
 .container {
@@ -23,6 +28,7 @@ p {
     max-width: 800px;
     padding: 10px;
 }
+
 .results {
     display: flex;
     flex-direction: column;
