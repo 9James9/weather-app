@@ -79,3 +79,27 @@ p {
 .hidden {
     display: none;
 }
+.currenttemp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 5px solid black;
+    padding-right: 10px;
+
+}
+.currentTempNum {
+    font-size: 60px;
+}
+.resultbox {
+    display: flex;
+    
+
+
+}
+
+.highTempLowTemp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px;
+}

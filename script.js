@@ -5,16 +5,16 @@ const convertBtn = document.querySelector('[data-convert-celsius]')
 searchButton.addEventListener('click', e => {
     e.preventDefault()
     let city = cityInput.value
-    getWeather(city, 'fahrenheit')
+    getWeather(city, 'F')
     // cityInput.value = ''
 })
 convertBtn.addEventListener('click', () => {
     let city = cityInput.value
     if (convertBtn.textContent == 'Convert to Celsius') {
-        getWeather(city, 'celsius')
+        getWeather(city, 'C')
         convertBtn.textContent = 'Convert to Fahrenheit'
     } else if (convertBtn.textContent == 'Convert to Fahrenheit') {
-        getWeather(city, 'fahrenheit')
+        getWeather(city, 'F')
         convertBtn.textContent = 'Convert to Celsius'
     }
 
@@ -25,14 +25,14 @@ async function getWeather(city, unit) {
     })
     response.json()
         .then(response => {
-            if (unit == 'fahrenheit') {
-                displayCityWeather('Fahrenheit',
+            if (unit == 'F') {
+                displayCityWeather('F',
                     kelvinToFahrenheit(response.main.temp),
                     kelvinToFahrenheit(response.main.temp_max),
                     kelvinToFahrenheit(response.main.temp_min),
                     convertMsToMph(response.wind.speed))
-            } else if (unit == 'celsius') {
-                displayCityWeather('Celsius',
+            } else if (unit == 'C') {
+                displayCityWeather('C',
                     kelvinToCelsius(response.main.temp),
                     kelvinToCelsius(response.main.temp_max),
                     kelvinToCelsius(response.main.temp_min),
@@ -50,6 +50,7 @@ function displayCityWeather(unit, currentTemp, highTemp, lowTemp, windSpeeds) {
     document.querySelector('[data-high-temp]').textContent = `${highTemp}${unit}`
     document.querySelector('[data-wind]').textContent = `${windSpeeds}mph`
     document.querySelector('[data-low-temp]').textContent = `${lowTemp}${unit}`
+    document.querySelector('.results').classList.remove('hidden')
 }
 
 function displayCurrentCity(city) {
@@ -77,4 +78,4 @@ function kelvinToCelsius(kelvin) {
 function kelvinToFahrenheit(kelvin) {
     return (((kelvin - 273.15) * 9 / 5) + 32).toFixed(0)
 }
-// getWeather('fort worth','fahrenheit')
+// getWeather('fort worth','F')
