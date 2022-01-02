@@ -35,3 +35,40 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+.cityinput {
+    border-radius: 5px;
+    height: 30px;
+    font-family: cursive;
+    font-size: 24px;
+}
+
+.searchbutton {
+    display: inline-block;
+    padding: 0.2em 1.45em;
+    margin: 0.1em;
+    border: 0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #CCCCCC;
+    text-align: center;
+    position: relative;
+    height: 30px;
+}
+
+.searchbutton:hover {
+    border-color: #7a7a7a;
+}
+
+.searchbutton:active {
+    background-color: #999999;
+}
+
+.cityinput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
